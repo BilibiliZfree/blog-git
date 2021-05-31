@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 登录页头部 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="zfree">
+    <title>个人博客登陆</title>
+    <link rel="stylesheet" href="../../static/css/signin.css">
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/iconfont/iconfont.css">
+</head>
+
+<!-- 登录页主体 -->
+
+<body class="text-center">
+    <!-- 主表格 -->
+    <main class="form-signin">
+        <!-- 表单 -->
+        <form id="loginForm">
+            <!-- 图标 -->
+            <img class="mb-4" src="../../static/assets/brand/bilibilibloglogo.svg" alt="" width="100" height="100">
+            <!-- 提示语 -->
+            <h1 class="h3 mb-3 fw-normal text-info">请登陆</h1>
+
+            <!--用户名输入-->
+            <div class="inputBox">
+                <div class="inputText">
+                    <input class="form-control" type="text" name="username" placeholder="请输入账号" required="" autofocus="">
+                </div>
+                <!--密码输入-->
+                <div class="inputText">
+                    <input class="form-control" type="password" name="password" placeholder="请输入密码" required="">
+                </div>
+            </div>
+
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a href="" class="nav-link">注册账号</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">忘记密码</a>
+                </li>
+            </ul>
+
+            <div class="checkbox mb-3">
+                <label class="text-info">
+                    <input type="checkbox" value="remember-me"> 记住我
+                </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">登陆</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2021-2022</p>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a href="" class="nav-link">中文</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">English</a>
+                </li>
+            </ul>
+
+        </form>
+    </main>
+
+    <script src="../../static/js/bootstrap.min.js"></script>
+</body>
+
+</html>

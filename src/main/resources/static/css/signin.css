@@ -1,0 +1,62 @@
+/** 通用样式*/
+
+* {
+    /* 通用选择器（*）选择页面上的所有的 HTML 元素,会影响页面上每个html元素。 */
+    margin: 0;
+    /* 外边距 */
+    padding: 0;
+    /* 内边距 */
+    box-sizing: border-box;
+    /* CSS box-sizing 属性允许我们在元素的总宽度和高度中包括内边距（填充）和边框。 */
+}
+
+
+/** 主体 */
+
+body {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    overflow-x: hidden;
+    background-image: url("../assets/images/index_background.jpeg");
+    background-repeat: no-repeat;
+}
+
+#loginForm {
+    margin: 0 auto;
+    padding: 20px 50px;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    background-color: #00000090;
+    text-align: center;
+}
+
+#loginForm .inputBox {
+    margin-top: 50px;
+}
+
+#loginForm .inputBox .inputText {
+    margin-top: 10px;
+}
+
+#loginForm .inputBox .inputText span {
+    color: #9fcdff;
+    font-size: 24px;
+}
+
+#loginForm .inputBox .inputText input {
+    border: 0;
+    padding: 10px 10px;
+    border-bottom: 1px solid white;
+    background-color: #00000000;
+    color: white;
+}
