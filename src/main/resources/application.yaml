@@ -1,1 +1,4 @@
-
+spring:
+  profiles:
+#    当前环境- dev：开发环境- prod：生产环境- test：测试环境-
+    active: dev

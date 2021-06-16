@@ -1,1 +1,37 @@
 
+#生产环境
+#服务
+server:
+  #  端口号
+  port: 8081
+
+spring:
+  # 数据源
+  datasource:
+    # 连接池
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 数据库链接
+    url: jdbc:mysql://gz-cdb-q62ftd9n.sql.tencentcdb.com:59252/blog?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    # 数据库登陆账号
+    username: root
+    # 密码
+    password: zfree985463
+  # Java Persistence API
+  jpa:
+    # 属性
+    properties:
+      # 框架??
+      hibernate:
+        # 数据库方言（数据库厂商的Sql语言）配置
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      # 数据库操作模式
+      # create 表：创建/覆盖 => 删除之前的同名表（包括数据）后建立一张新表（没有数据）
+      # create-drop 表：创建/覆盖-阅后即焚 => 删除之前的同名表（包括数据）后建立一张新表（没有数据），用完了就删除这张表
+      # update 表更新 => 如果数据库里没有同名表就建立一张新表，如果有同名表则只操作其数据
+      # validate 表校验 => 会验证创建数据库表结构，只会和数据库中的表进行比较，不会创建新表，但是会插入新值，运行程序会校验实体字段与数据库已有的表的字段类型是否相同，不同会报错
+      ddl-auto: update
+    # 运行时输出SQL语句
+    show-sql: true
+    # ??
+    open-in-view: false
