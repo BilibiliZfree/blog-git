@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <!-- 登录页头部 -->
 
@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="zfree">
     <title>个人博客登陆</title>
-    <link rel="stylesheet" href="../../static/css/signin.css">
-    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/signin.css" th:href="@{/css/signin.css}">
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
 </head>
 
 <!-- 登录页主体 -->
@@ -21,7 +21,8 @@
         <!-- 表单 -->
         <form id="loginForm">
             <!-- 图标 -->
-            <img class="mb-4" src="../../static/assets/brand/bilibilibloglogo.svg" alt="" width="100" height="100">
+            <img class="mb-4" src="../../static/assets/brand/bilibilibloglogo.svg"
+                 th:src="@{/assets/brand/bilibilibloglogo.svg}" alt="" width="100" height="100">
             <!-- 提示语 -->
             <h1 class="h3 mb-3 fw-normal text-info">请登陆</h1>
 
@@ -67,8 +68,7 @@
 
         </form>
     </main>
-
-    <script src="../../static/js/bootstrap.min.js"></script>
+    <script src="../../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
 </body>
 
 </html>
