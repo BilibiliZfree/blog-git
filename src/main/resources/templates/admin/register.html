@@ -3,7 +3,7 @@
 
 <!-- 注册页头部 -->
 
-<head>
+<head th:replace="commons/head_admin::head('博客用户注册')">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,7 +78,7 @@
             <div>
                 <button class="w-100 btn btn-lg btn-primary" type="submit">注册</button>
                 <p></p>
-                <a class="w-100 btn btn-lg btn-primary" href="#" role="button">返回首页</a>
+                <a class="w-100 btn btn-lg btn-primary" href="index.html" th:href="@{index.html}" role="button">返回首页</a>
             </div>
             <p class="mt-5 mb-3 text-muted">&copy; 2021-2022</p>
             <ul class="nav justify-content-center">

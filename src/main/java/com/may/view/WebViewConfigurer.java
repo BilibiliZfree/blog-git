@@ -18,5 +18,7 @@ public class WebViewConfigurer implements WebMvcConfigurer {
 
         /*登录页*/
         registry.addViewController("/index.html").setViewName("admin/index");
+        /*注册页*/
+        registry.addViewController("/register.html").setViewName("admin/register");
     }
 }
