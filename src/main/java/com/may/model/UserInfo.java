@@ -17,7 +17,7 @@ import java.util.Date;
 public class UserInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private BigInteger id;
+    private Integer id;
     private String account;
     private String password;
     private String nickname;
@@ -25,7 +25,7 @@ public class UserInfo {
     private String telephone;
     private String avatar;
     private Integer gender;
-    private BigInteger account_balance;
+    private Integer account_balance;
     private Integer status;
     private Integer permission;
     @Temporal(TemporalType.TIMESTAMP)
@@ -36,11 +36,11 @@ public class UserInfo {
     public UserInfo() {
     }
 
-    public BigInteger getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(BigInteger id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -100,11 +100,11 @@ public class UserInfo {
         this.gender = gender;
     }
 
-    public BigInteger getAccount_balance() {
+    public Integer getAccount_balance() {
         return account_balance;
     }
 
-    public void setAccount_balance(BigInteger account_balance) {
+    public void setAccount_balance(Integer account_balance) {
         this.account_balance = account_balance;
     }
 
