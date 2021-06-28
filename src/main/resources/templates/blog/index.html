@@ -26,7 +26,7 @@
             <!-- 提示语 -->
             <h1 class="h3 mb-3 fw-normal text-info">请登陆</h1>
             <!--如果msg的消息不为空，则显示这个消息-->
-            <p style="color: red" th:text="${}"></p>
+            <p style="color: red" th:text="${message}" th:if="${not #strings.isEmpty(message)}"></p>
 
             <!--用户名输入-->
             <div class="inputBox">

@@ -44,8 +44,8 @@ public class LoginController {
             session.setAttribute("user",user);
             return "redirect:/home";
         }else{
-            model.addAttribute("aaa","bbb");
-            return "redirect:/index.html";
+            model.addAttribute("message","用户名或密码错误.");
+            return "/blog/index";
         }
     }
 
