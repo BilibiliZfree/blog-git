@@ -7,10 +7,10 @@ import java.math.BigInteger;
 import java.util.Date;
 
 /**
- * @author 紫枫伊
- * @creatDate 2021/6/17 17:56
- * @updateDate 2021/6/17 17:56
- * @description 用户信息表
+ * @author : 紫枫伊
+ * @since  : creatDate 2021/6/17 17:56
+ * @code : updateDate 2021/6/17 17:56
+ * @code : description : 用户信息表
  */
 @Entity
 @Table(name = "userinfo")

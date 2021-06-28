@@ -19,12 +19,14 @@
     <!-- 主表格 -->
     <main class="form-signin">
         <!-- 表单 -->
-        <form id="loginForm">
+        <form id="loginForm" method="post" th:action="@{/user/login}">
             <!-- 图标 -->
             <img class="mb-4" src="../../static/assets/brand/bilibilibloglogo.svg"
                  th:src="@{/assets/brand/bilibilibloglogo.svg}" alt="" width="100" height="100">
             <!-- 提示语 -->
             <h1 class="h3 mb-3 fw-normal text-info">请登陆</h1>
+            <!--如果msg的消息不为空，则显示这个消息-->
+            <p style="color: red" th:text="${}"></p>
 
             <!--用户名输入-->
             <div class="inputBox">

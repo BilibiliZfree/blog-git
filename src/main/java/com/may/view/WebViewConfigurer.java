@@ -1,16 +1,18 @@
 package com.may.view;
 
+import com.may.interceptor.LoginHandlerInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
 /**
  * @author : 紫枫伊
- * @param : creatTime 2021/6/16 17:03
- * @param : updateDate 2021/6/16 17:14
- * @param : description 视图控制器
+ * @since  : creatTime 2021/6/16 17:03
+ * @code : updateDate 2021/6/16 17:14
+ * @code : description 视图控制器
  */
 @Configuration
 public class WebViewConfigurer implements WebMvcConfigurer {
@@ -24,5 +26,20 @@ public class WebViewConfigurer implements WebMvcConfigurer {
         registry.addViewController("/index.html").setViewName("blog/index");
         /*注册页*/
         registry.addViewController("/register.html").setViewName("blog/register");
+        registry.addViewController("/home").setViewName("blog/homepage");
+    }
+
+    /**
+     * @author : 紫枫伊
+     * @since : 2021/6/28 12:07
+     * @code : updateTime 2021/6/28 12:07
+     * @code : description 拦截器
+     */
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new LoginHandlerInterceptor()).
+                addPathPatterns("/**").
+                excludePathPatterns("/index.html","/","/user/login","/register.html","/user/register").
+                excludePathPatterns("/assets/brand/**", "/assets/images/**","/css/**","/iconfont/**","/js/**");
     }
 }

@@ -19,7 +19,7 @@
     <!-- 主表格 -->
     <main class="form-signin">
         <!-- 表单 -->
-        <form id="loginForm">
+        <form id="loginForm" method="post" th:action="@{/user/register}">
             <!-- 点击图标更换头像 -->
             <a href="#">
                 <img class="mb-4" src="../../static/assets/brand/bilibilibloglogo.svg" th:src="@{/assets/brand/bilibilibloglogo.svg}" alt="" width="100" height="100">
