@@ -1,4 +1,15 @@
-<!DOCTYPE>
-<html lang="en">
-<h1>这里是homepage.</h1>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="commons/head_blog::head('博客首页')"></head>
+
+<body>
+
+    <header th:replace="commons/header_blog::header"></header>
+
+
+
+    <div th:replace="commons/script_blog::scr"></div>
+</body>
+
 </html>
