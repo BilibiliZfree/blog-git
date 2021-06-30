@@ -42,7 +42,7 @@ public class LoginController {
         if (user != null){
             user.setPassword(null);
             session.setAttribute("user",user);
-            return "redirect:/home";
+            return "redirect:/blog";
         }else{
             model.addAttribute("message","用户名或密码错误.");
             return "/blog/index";

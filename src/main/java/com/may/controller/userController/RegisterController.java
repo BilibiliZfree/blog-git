@@ -45,6 +45,6 @@ public class RegisterController {
         userService.User_saveNewUser(newUser);
         newUser.setPassword(null);
         session.setAttribute("user",newUser);
-        return "blog/homepage";
+        return "/blog/blog";
     }
 }
