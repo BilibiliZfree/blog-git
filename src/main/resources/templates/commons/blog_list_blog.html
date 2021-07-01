@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<div class="container">
+    <div class="row">
+
+        <!--头部-->
+        <div class="card mb-3 bg-light rounded p-3 text-center" th:fragment="blogListHead(value0)">
+            <span class="font-monospace" th:text="${value0}">博客列表</span>
+        </div>
+        <!--头部 END-->
+
+        <!--博客列表-->
+        <div class="card mb-3 bg-light rounded p-3" th:fragment="blogList">
+            <div class=" row">
+                <div class="card col-md-8 align-bottom">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content.
+                            This content is a little bit longer...</p>
+                        <!--最新修改/更新时间-->
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                    <div class="card-footer text-start" style="height: 3em">
+                        <img th:src="@{assets/brand/bilibilibloglogo.svg}" class="h-100">
+                        <!--用户名-->
+                        <span>紫枫伊</span>
+                        <span class="text-gray-500">发布于</span>
+                        <!--发布时间-->
+                        <span class="text-muted">2021年07月1日 15:33</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img th:src="@{assets/images/minecraft.jpeg}" class="img-fluid h-auto rounded" alt="">
+                </div>
+            </div>
+        </div>
+        <!--博客列表 END-->
+
+        <!--博客分页-->
+        <div class=" rounded p-3 text-center align-items-center" th:fragment="blogPages">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">上一页</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">…</a></li>
+                    <li class="page-item"><a class="page-link" href="#">9</a></li>
+                    <li class="page-item"><a class="page-link" href="#">10</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">下一页</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!--博客分页 END-->
+
+    </div>
+</div>
+
+</html>

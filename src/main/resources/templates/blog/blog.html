@@ -7,8 +7,21 @@
 
     <header th:replace="commons/header_blog::header"></header>
 
+    <div class="container">
+        <div class="row">
+            <div th:replace="commons/blog_list_blog::blogListHead('博客列表')"></div>
 
+            <div th:replace="commons/blog_list_blog::blogList"></div>
+            <div th:replace="commons/blog_list_blog::blogList"></div>
+            <div th:replace="commons/blog_list_blog::blogList"></div>
+            <div th:replace="commons/blog_list_blog::blogList"></div>
+            <div th:replace="commons/blog_list_blog::blogList"></div>
 
+            <div th:replace="commons/blog_list_blog::blogPages"></div>
+        </div>
+    </div>
+
+    <footer th:replace="commons/footer_bolg::footer"></footer>
     <div th:replace="commons/script_blog::scr"></div>
 </body>
 
