@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * @author : 紫枫伊
  * @since  : creatTime 2021/6/16 17:03
- * @code : updateDate 2021/6/16 17:14
+ * @code : updateDate 2021/7/1 17:55
  * @code : description 视图控制器
  */
 @Configuration
@@ -27,6 +27,7 @@ public class WebViewConfigurer implements WebMvcConfigurer {
         /*注册页*/
         registry.addViewController("/register.html").setViewName("blog/register");
         registry.addViewController("/blog").setViewName("/blog/blog");
+        registry.addViewController("/archives").setViewName("/blog/archives");
     }
 
     /**

@@ -1,3 +1,8 @@
+.bd-footer a {
+    color: #495057!important;
+    text-decoration: none!important;
+}
+
 .bd-footer-links {
     padding-left:0;margin-bottom:1rem}
 .bd-footer-links li{

@@ -2,16 +2,58 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <body>
 
-<footer class="bd-footer p-3 p-md-5 mt-5 text-center text-muted bg-light" th:fragment="footer">
-    <div class="container">
-        <ul class="bd-footer-links">
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Bilibili</a></li>
-            <li><a href="#">CSDN</a></li>
-            <li><a href="#">友情链接</a></li>
-        </ul>
-        <p class="mb-0">不用看了这是我抄的.</p>
-        <p class="mb-0">版本号，不知道</p>
+<footer class="bd-footer py-5 mt-5 bg-light" th:fragment="footer">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-3 mb-3">
+                <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap">
+                    <img th:src="@{/assets/brand/bilibilibloglogo.svg}" width="40" height="32">
+                    <span class="fs-5">个人博客</span>
+                </a>
+                <ul class="list-unstyled small text-muted">
+                    <li class="mb-2">这个是 <a href="#">紫枫伊</a> 用了亿点点时间做出来的.</li>
+                    <li class="mb-2">首发时间.</li>
+                    <li class="mb-2">版本 v0.0.1.</li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                <h5>链接</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a th:href="@{/blog}">主页</a></li>
+                    <li class="mb-2"><a th:href="@{/archives}">流年集</a></li>
+                    <li class="mb-2"><a href="#">专栏</a></li>
+                    <li class="mb-2"><a href="#">留言板</a></li>
+                    <li class="mb-2"><a href="#">资源库</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+                <h5>热门博文</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#">Blog title</a></li>
+                    <li class="mb-2"><a href="#">Blog title</a></li>
+                    <li class="mb-2"><a href="#">Blog title</a></li>
+                    <li class="mb-2"><a href="#">Blog title</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+                <h5>项目展示</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#">地址1</a></li>
+                    <li class="mb-2"><a href="#">地址2</a></li>
+                    <li class="mb-2"><a href="#">地址3</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+                <h5>关注我</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="https://space.bilibili.com/23607254">哔哩哔哩</a></li>
+                    <li class="mb-2"><a href="#">CSDN</a></li>
+                    <li class="mb-2"><a href="https://github.com/bilibilizfree">github</a></li>
+                    <li class="mb-2"><a href="#">gitee</a></li>
+                    <li class="mb-2"><a href="#">其他</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </footer>
 
