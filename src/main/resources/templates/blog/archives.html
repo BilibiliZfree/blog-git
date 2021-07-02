@@ -3,10 +3,33 @@
 <head th:replace="commons/head_blog::head('流年集')"></head>
 <body>
   <header th:replace="commons/header_blog::header"></header>
+
+  <div class="container">
+    <div class="row">
+      <div th:replace="commons/blog_list_blog::blogListHead('2021')"></div>
+      <div th:replace="commons/blog_list_blog::blogList"></div>
+      <div th:replace="commons/blog_list_blog::blogList"></div>
+      <div th:replace="commons/blog_list_blog::blogList"></div>
+      <div th:replace="commons/blog_list_blog::blogList"></div>
+      <div th:replace="commons/blog_list_blog::blogList"></div>
+
+      <div th:replace="commons/blog_list_blog::blogListHead('2020')"></div>
+      <div th:replace="commons/blog_list_blog::blogList"></div>
+      <div th:replace="commons/blog_list_blog::blogList"></div>
+      <div th:replace="commons/blog_list_blog::blogList"></div>
+      <div th:replace="commons/blog_list_blog::blogList"></div>
+      <div th:replace="commons/blog_list_blog::blogList"></div>
+
+      <div th:replace="commons/blog_list_blog::blogListHead('2019')"></div>
+      <div th:replace="commons/blog_list_blog::blogList"></div>
+      <div th:replace="commons/blog_list_blog::blogList"></div>
+      <div th:replace="commons/blog_list_blog::blogList"></div>
+      <div th:replace="commons/blog_list_blog::blogList"></div>
+      <div th:replace="commons/blog_list_blog::blogList"></div>
+    </div>
+  </div>
+  <footer th:replace="commons/footer_bolg::footer"></footer>
+
   <div th:replace="commons/script_blog::scr"></div>
-
-
-
-
 </body>
 </html>

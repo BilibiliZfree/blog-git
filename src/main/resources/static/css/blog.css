@@ -1,3 +1,17 @@
+.bd-header a {
+    color: #495057!important;
+    text-decoration: none!important;
+}
+
+.bd-header-links {
+    padding-left:0;margin-bottom:1rem}
+.bd-header-links li{
+    display:inline-block
+}
+.bd-header-links li+li {
+    margin-left:1rem
+}
+
 .bd-footer a {
     color: #495057!important;
     text-decoration: none!important;
