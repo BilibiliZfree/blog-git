@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>header_admin</title>
 </head>
 <body>
 
@@ -14,12 +14,9 @@
       </a>
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a th:href="@{blog}" class="nav-link px-2 link-light">首页</a></li>
-        <li><a th:href="@{archives}" class="nav-link px-2 link-dark">流年集</a></li>
-        <!--<li><a href="#" class="nav-link px-2 link-dark">专栏</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">留言板</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">资源库</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">关于我</a></li>-->
+        <li><a th:href="@{admin}" class="nav-link px-2 link-light">后台管理首页</a></li>
+        <li><a th:href="@{blogs}" class="nav-link px-2 link-dark">博客管理</a></li>
+        <li><a th:href="@{editor}" class="nav-link px-2 link-dark">博客编辑暂用</a></li>
       </ul>
 
       <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -31,8 +28,7 @@
           <img th:src="@{/assets/brand/bilibilibloglogo.svg}" alt="mdo" width="32" height="32" class="rounded-circle">
         </a>
         <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style>
-          <li><a class="dropdown-item" href="#">修改密码</a></li>
-          <li><a class="dropdown-item" th:href="@{admin}">后台管理</a></li>
+          <li><a class="dropdown-item" th:href="@{blog}">返回主页</a></li>
           <li>
             <hr class="dropdown-divider">
           </li>
@@ -42,5 +38,6 @@
     </div>
   </div>
 </header>
+
 </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>editor_admin_pic</title>
+</head>
+<body>
+    <!--添加图片-->
+    <div class="p-3">
+        <div th:fragment="select_pic" class="card mb-4 ">
+            <!--博客标题-->
+            <div class="card-header input-group mb-3">
+                <span class="input-group-text" id="basic-addon3">博客标题</span>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            </div>
+            <!--图片预览-->
+            <div style="">
+                <div src="" class="card-img p-3" alt="" id="img-show"></div>
+            </div>
+            <!--图片链接-->
+            <div class="mb-3 p-3 card-body">
+                <input class="form-control" type="file" id="img-select">
+            </div>
+        </div>
+    </div>
+</body>
+
+<div th:fragment="src_pic_show">
+    <script>
+        var getPhoto = document.getElementById("img-select");
+        getPhoto.onchange = function () {
+            var file = this.files;
+            console.log(file);
+            var reader = new FileReader();
+            reader.readAsDataURL(file[0]);
+            reader.onload = function () {
+                var image = document.createElement("img")
+                image.src = reader.result;
+                var showPicture = document.getElementById("img-show");
+                showPicture.append(image);
+            };
+        };
+    </script>
+</div>
+</html>
