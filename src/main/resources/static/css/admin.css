@@ -1,0 +1,8 @@
+/** 主体 */
+
+body {
+    background-image: url("../assets/images/minecraft2.jpeg") !important;
+    background-repeat: no-repeat!important;
+    background-size:cover!important;
+    background-attachment:fixed!important;
+}

@@ -4,12 +4,14 @@
 }
 
 .bd-header-links {
-    padding-left:0;margin-bottom:1rem}
+    padding-left:0!important;
+    margin-bottom:1rem!important;
+}
 .bd-header-links li{
-    display:inline-block
+    display:inline-block!important;
 }
 .bd-header-links li+li {
-    margin-left:1rem
+    margin-left:1rem!important;
 }
 
 .bd-footer a {
@@ -18,10 +20,12 @@
 }
 
 .bd-footer-links {
-    padding-left:0;margin-bottom:1rem}
+    padding-left:0!important;
+    margin-bottom:1rem!important;
+}
 .bd-footer-links li{
-    display:inline-block
+    display:inline-block!important;
 }
 .bd-footer-links li+li {
-    margin-left:1rem
+    margin-left:1rem!important;
 }

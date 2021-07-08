@@ -9,20 +9,26 @@
     <div th:fragment="editor_article">
         <div  class="container card">
             <!--博客标题-->
-            <div class="justify-content-center input-group mb-3 text-center card-header">
+            <div class="input-group mb-3 card-body">
                 <span class="input-group-text" id="basic-addon3">博客标题</span>
                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
             </div>
             <!--图片预览-->
-            <div class="w-100 mb-100 card-img text-center" id="img-show" alt="" data-show-duration="800" style="transition-duration: 800ms; opacity: 1; transform: translateY(0px);"></div>
-            <!--清除图片按钮-->
-            <!--<div class="d-md-flex justify-content-md-end card-body">
-                <button class="btn btn-primary" type="button" onclick="">清空图片</button>
-            </div>-->
-            <!--图片链接-->
-            <div class="mb-3 p-3 card-body">
-                <input class="form-control" type="file" id="img-select">
+            <div class="w-100 mb-100 text-center">
+                <img id="img-show" class=" card-img">
             </div>
+
+            <!--<div class="w-100 mb-100 card-img text-center" id="img-show2" alt="" data-show-duration="800" style="transition-duration: 800ms; opacity: 1; transform: translateY(0px);"></div>-->
+            <!--清除图片按钮-->
+            <!--图片链接-->
+            <div class="input-group mb-3 card-body">
+                <span class="input-group-text" >链接地址</span>
+                <input type="text" class="form-control" placeholder="请输入图片链接..." id="basic-addon1">
+                <button class="btn btn-default" type="button" id="button-addon2" onclick="imgShow()">预览图片</button>
+            </div>
+            <!--<div class="mb-3 p-3 card-body">
+                <input class="form-control" type="file" id="img-select">
+            </div>-->
 
             <!--Makedown编辑器-->
 
@@ -65,7 +71,7 @@
             <!--返回、上传按钮-->
             <div class="card-body d-grid gap-2 d-md-flex justify-content-md-end">
                 <button class="btn me-md-2" type="button">返回</button>
-                <button class="btn" type="button">上传</button>
+                <button class="btn" type="button">提交</button>
             </div>
 
         </div>
@@ -75,7 +81,15 @@
 
 <div th:fragment="src_pic_show">
     <!--读取图片逻辑-->
+    <!--读取网络url图片-->
     <script>
+        function imgShow() {
+            document.getElementById("img-show").src = document.getElementById("basic-addon1").value;
+        }
+    </script>
+
+    <!--读取本地图片:这个脚本不能替换，只能傻憨憨地在后面又加上一张图-->
+    <!--<script>
         var getPhoto = document.getElementById("img-select");
         getPhoto.onchange = function () {
             var file = this.files;
@@ -86,11 +100,11 @@
                 var image = document.createElement("img")
                 image.src = reader.result;
                 image.width = screen.width/1.5;
-                var showPicture = document.getElementById("img-show");
+                var showPicture = document.getElementById("img-show2");
                 showPicture.append(image);
             };
         };
-    </script>
+    </script>-->
     <script type="text/javascript">
         var testEditor;
 
